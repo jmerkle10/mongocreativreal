@@ -41,15 +41,20 @@ Task.find(function(err,taskList) {
 })
 });
 
+
 router.delete('/comment', function(req,res) {
 console.log("deleting");
 Task.find();
 Task.remove(function(err,taskList){
 if (err) return console.error(err);
 else {
+//req.comment.remove(commentList );
 console.log(taskList);
 }
 })
 });
+
+
+
 
 module.exports = router;
